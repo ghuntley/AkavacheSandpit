@@ -85,7 +85,7 @@ Action<string, string> Package = (nuspec, basePath) =>
         Tags                     = new [] {  "Akavache", "Cache", "Xamarin", "Sqlite3", "Magic" },
         ReleaseNotes             = new [] { string.Format("{0}/releases", githubUrl) },
 
-        Symbols                  = true,
+        Symbols                  = false,
         Verbosity                = NuGetVerbosity.Detailed,
         OutputDirectory          = artifactDirectory,
         BasePath                 = basePath,
@@ -230,18 +230,11 @@ Task("PublishPackages")
     {
         // only push the package which was created during this build run.
         var packagePath = artifactDirectory + File(string.Concat(package, ".", nugetVersion, ".nupkg"));
-        var symbolsPath = artifactDirectory + File(string.Concat(package, ".", nugetVersion, ".symbols.nupkg"));
 
         // Push the package.
         NuGetPush(packagePath, new NuGetPushSettings {
             Source = source,
             ApiKey = apiKey
-        });
-
-        // Push the symbols
-        NuGetPush(symbolsPath, new NuGetPushSettings {
-           Source = source,
-           ApiKey = apiKey
         });
     }
 });
@@ -303,10 +296,8 @@ Task("PublishRelease")
     {
         // only push the package which was created during this build run.
         var packagePath = artifactDirectory + File(string.Concat(package, ".", nugetVersion, ".nupkg"));
-        var symbolsPath = artifactDirectory + File(string.Concat(package, ".", nugetVersion, ".symbols.nupkg"));
 
         GitReleaseManagerAddAssets(username, token, githubOwner, githubRepository, majorMinorPatch, packagePath);
-        GitReleaseManagerAddAssets(username, token, githubOwner, githubRepository, majorMinorPatch, symbolsPath); 
     }
 
     GitReleaseManagerClose(username, token, githubOwner, githubRepository, majorMinorPatch);
