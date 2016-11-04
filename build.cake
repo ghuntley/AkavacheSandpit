@@ -35,14 +35,14 @@ var isRunningOnWindows = IsRunningOnWindows();
 
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isPullRequest = AppVeyor.Environment.PullRequest.IsPullRequest;
-var isRepository = StringComparer.OrdinalIgnoreCase.Equals("akavache/akavache", AppVeyor.Environment.Repository.Name);
+var isRepository = StringComparer.OrdinalIgnoreCase.Equals("ghuntkey/akavachesandpit", AppVeyor.Environment.Repository.Name);
 
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("release", AppVeyor.Environment.Repository.Branch);
 var isMasterBranch = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
 var isTagged = AppVeyor.Environment.Repository.Tag.IsTag;
 
-var githubOwner = "akavache";
-var githubRepository = "akavache";
+var githubOwner = "ghuntley";
+var githubRepository = "akavachesandpit";
 var githubUrl = string.Format("https://github.com/{0}/{1}", githubOwner, githubRepository);
 
 // Version
@@ -54,7 +54,7 @@ var nugetVersion = gitVersion.NuGetVersion;
 
 // Artifacts
 var artifactDirectory = "./artifacts/";
-var packageWhitelist = new[] { "Akavache", "Akavache.Core", "Akavache.Deprecated", "Akavache.Mobile", "Akavache.Sqlite3" };
+var packageWhitelist = new[] { "Test.Akavache", "Test.Akavache.Core", "Test.Akavache.Deprecated", "Test.Akavache.Mobile", "Test.Akavache.Sqlite3" };
 
 // Macros
 Action Abort = () => { throw new Exception("a non-recoverable fatal error occurred."); };

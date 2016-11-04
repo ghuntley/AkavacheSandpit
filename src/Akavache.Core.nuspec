@@ -30,7 +30,7 @@
       </group>
     </dependencies>
 
-    <id>akavache.core</id>
+    <id>Test.akavache.core</id>
     <title>Akavache.Core</title>
     <description>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</description>
     <summary>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</summary>

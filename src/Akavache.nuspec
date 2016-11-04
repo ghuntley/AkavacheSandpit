@@ -3,7 +3,7 @@
   <metadata>
     <version>$version$</version>
     <dependencies>
-      <dependency id="Akavache.SQLite3" version="[$version$]" />
+      <dependency id="Test.Akavache.SQLite3" version="[$version$]" />
     </dependencies>
 
     <id>akavache</id>
