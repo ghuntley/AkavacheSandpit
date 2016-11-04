@@ -37,7 +37,6 @@ var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isPullRequest = AppVeyor.Environment.PullRequest.IsPullRequest;
 var isRepository = StringComparer.OrdinalIgnoreCase.Equals("ghuntley/akavachesandpit", AppVeyor.Environment.Repository.Name);
 
-var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("release", AppVeyor.Environment.Repository.Branch);
 var isMasterBranch = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
 var isTagged = AppVeyor.Environment.Repository.Tag.IsTag;
 
