@@ -203,7 +203,7 @@ Task("PublishPackages")
     .IsDependentOn("Package")
     .WithCriteria(() => !local)
     .WithCriteria(() => !isPullRequest)
-    .WithCriteria(() => !(isMaster && !isTagged)
+    .WithCriteria(() => !(isMaster && !isTagged))
     .WithCriteria(() => isRepository)
     .Does (() =>
 {
