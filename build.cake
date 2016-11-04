@@ -252,7 +252,7 @@ Task("CreateRelease")
     .WithCriteria(() => !local)
     .WithCriteria(() => !isPullRequest)
     .WithCriteria(() => isRepository)
-    .WithCriteria(() => isReleaseBranch)
+    .WithCriteria(() => isMasterBranch)
     .WithCriteria(() => !isTagged)
     .Does (() =>
 {
