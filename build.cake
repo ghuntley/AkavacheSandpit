@@ -51,6 +51,7 @@ var majorMinorPatch = gitVersion.MajorMinorPatch;
 var semVersion = gitVersion.SemVer;
 var informationalVersion = gitVersion.InformationalVersion;
 var nugetVersion = gitVersion.NuGetVersion;
+var buildVersion = gitVersion.FullBuildMetadata;
 
 // Artifacts
 var artifactDirectory = "./artifacts/";
@@ -151,7 +152,7 @@ Task("UpdateAppVeyorBuildNumber")
     .WithCriteria(() => isRunningOnAppVeyor)
     .Does(() =>
 {
-    AppVeyor.UpdateBuildVersion(informationalVersion);
+    AppVeyor.UpdateBuildVersion(buildVersion);
 });
 
 Task("UpdateAssemblyInfo")
