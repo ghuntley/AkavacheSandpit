@@ -31,7 +31,7 @@
     </dependencies>
 
     <id>Test.akavache.core</id>
-    <title>Akavache.Core</title>
+    <title>Test.Akavache.Core</title>
     <description>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</description>
     <summary>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</summary>
   </metadata>

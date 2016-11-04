@@ -7,7 +7,7 @@
       <dependency id="reactiveui-mobile" version="6.3.0" />
     </dependencies>
     <id>Test.akavache.mobile</id>
-    <title>Akavache.Mobile</title>
+    <title>Test.Akavache.Mobile</title>
     <description>An implementation of ISuspensionDriver that uses Akavache to save app state on tombstoning.</description>
     <summary>An implementation of ISuspensionDriver that uses Akavache to save app state on tombstoning.</summary>
   </metadata>

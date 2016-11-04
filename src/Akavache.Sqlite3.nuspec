@@ -7,7 +7,7 @@
       <dependency id="SQLitePCLRaw.bundle_e_sqlite3" version="1.1.0" />
     </dependencies>
     <id>Test.akavache.sqlite3</id>
-    <title>Akavache.SQLite3</title>
+    <title>Test.Akavache.SQLite3</title>
     <description>A backend for Akavache based on SQLite3, particularly recommended on mobile platforms.</description>
     <summary>A backend for Akavache based on SQLite3, particularly recommended on mobile platforms.</summary>
   </metadata>
