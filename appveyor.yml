@@ -21,7 +21,8 @@
   artifacts:
   - path: artifacts/*
   - path: '**/bin/*'
-
+  test: off
+  
 # configuration for "develop" branch
 -
   configuration: Development
@@ -42,6 +43,7 @@
   artifacts:
   - path: artifacts/*
   - path: '**/bin/*'
+  test: off
 
 # "fall back" configuration for all other branches
 # no "branches" section defined
