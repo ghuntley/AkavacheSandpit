@@ -1,3 +1,7 @@
+branches:
+    except:
+        - master
+        
 version: 1.0.{build}
 environment:
   NUGET_SOURCE: https://www.myget.org/F/akavache/api/v2/package
