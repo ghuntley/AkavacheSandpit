@@ -206,7 +206,7 @@ Task("PublishPackages")
     .WithCriteria(() => isRepository)
     .Does (() =>
 {
-    if (isMaster && !isTagged)
+    if (isMasterBranch && !isTagged)
     {
         Information("Packages will not be published as this release has not been tagged.");
         return;
