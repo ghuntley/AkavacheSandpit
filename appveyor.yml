@@ -11,7 +11,7 @@
     GITHUB_TOKEN:
       secure: R3xA9iMXfUUtFd3wuL38pcDa0/BjjpBvNcGShr5LRibZtBoOVSH47Jat75rwaGur
     NUGET_SOURCE: https://www.nuget.org/api/v2/package
-    NUGET_TOKEN:
+    NUGET_APIKEY:
       secure: 0g2AqQxgiAIFhqoJbbmEPrJa15Z8U5xYT6vQe43Gocuxbjw74hBAIKbU+Cj65UNd
   build_script:
   - ps: >-
