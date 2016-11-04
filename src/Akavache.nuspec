@@ -7,7 +7,7 @@
     </dependencies>
 
     <id>Test.akavache</id>
-    <title>Akavache</title>
+    <title>Test.Akavache</title>
     <description>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</description>
     <summary>An asynchronous, persistent key-value store for desktop and mobile applications on .NET</summary>
   </metadata>
