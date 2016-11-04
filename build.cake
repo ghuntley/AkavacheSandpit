@@ -208,7 +208,7 @@ Task("PublishPackages")
 {
     if (isMaster && !isTagged)
     {
-        Information("Packages will not be published as this release has not been tagged");
+        Information("Packages will not be published as this release has not been tagged.");
         return;
     }
 
