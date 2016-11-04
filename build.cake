@@ -204,8 +204,15 @@ Task("PublishPackages")
     .WithCriteria(() => !local)
     .WithCriteria(() => !isPullRequest)
     .WithCriteria(() => isRepository)
+    .WithCriteria(() => isMaster && isTagged)
     .Does (() =>
 {
+    if (isMaster && !isTagged)
+    {
+        Information("Packages will not be published as this release has not been tagged");
+        return;
+    }
+
     // Resolve the API key.
     var apiKey = EnvironmentVariable("NUGET_APIKEY");
     if (string.IsNullOrEmpty(apiKey))
