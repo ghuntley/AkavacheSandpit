@@ -1,7 +1,6 @@
 branches:
     only:
         - master
-skip_non_tags: true
 version: 1.0.{build}
 environment:
   GITHUB_USERNAME:
